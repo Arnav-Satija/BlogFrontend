@@ -1,24 +1,24 @@
 import axios from 'axios';
 
 
-const usersUrl = 'http://localhost:9000/server';
+const usersUrl = 'http://localhost:9000';
 
 export const addUser = async (user) => {
-    return await axios.post(`${usersUrl}/post`, user);
+    return await axios.post(`${usersUrl}/server/post`, user);
 }
 
 export const getUsers = async (user) => {
-    return await axios.get(`${usersUrl}/get`,user);
+    return await axios.get(`${usersUrl}/server/get`,user);
 }
 
 export const getUser = async (id) => {
-    return await axios.get(`${usersUrl}/get/${id}`);
+    return await axios.get(`${usersUrl}/server/get/${id}`);
 }
 
 export const editUser = async (id, user) => {
-    return await axios.patch(`${usersUrl}/patch/${id}`, user)
+    return await axios.patch(`${usersUrl}/server/patch/${id}`, user)
 }
 
 export const deleteUser = async (id) => {
-    return await axios.delete(`${usersUrl}/delete/${id}`);
+    return await axios.delete(`${usersUrl}/server/delete/${id}`);
 }
