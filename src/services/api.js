@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 
-const usersUrl = 'http://localhost:9000';
+const usersUrl = 'https://chocolate-eel-tie.cyclic.app';
 
 export const addUser = async (user) => {
     return await axios.post(`${usersUrl}/server/post`, user);
